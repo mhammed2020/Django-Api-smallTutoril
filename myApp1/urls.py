@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path,include
+from rest_framework import routers
 from  . import views
-app_name="myApp1"
+r = routers.DefaultRouter()
+r.register('blog',views.BlogerViewSet)
 urlpatterns = [
-path('',views.show,name = "show"),
+path('',include(r.urls)),
 
 ]
