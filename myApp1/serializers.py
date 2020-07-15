@@ -7,5 +7,5 @@ class BlogerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bloger
-        fields = ('firstName','lastName','email','subject','description','created')
+        fields = '__all__'
    
